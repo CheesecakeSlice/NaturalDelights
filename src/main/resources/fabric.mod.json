@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "naturaldelights",
+  "version": "${version}",
+  "name": "NaturalDelights",
+  "description": "A Vanilla+ Food Mod for Minecraft 1.21.1",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/naturaldelights/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "me.CheesecakeSlice.naturaldelights.client.NaturaldelightsClient"
+    ],
+    "main": [
+      "me.CheesecakeSlice.naturaldelights.Naturaldelights"
+    ]
+  },
+  "mixins": [
+    "naturaldelights.mixins.json",
+    {
+      "config": "naturaldelights.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
